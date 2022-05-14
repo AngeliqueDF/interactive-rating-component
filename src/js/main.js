@@ -91,4 +91,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	 */
 	const submitElement = document.querySelector('input[type="submit"]');
 
+	const ratingController = new RatingController();
+	ratingController.ratingSelectionListener(inputElements);
+	ratingController.displayThankYouState(sectionElement, submitElement);
 });
