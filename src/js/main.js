@@ -28,6 +28,55 @@ class RatingView {
 	}
 }
 
+/**
+ * Updates the state according to user input, renders the 'Thank you' view when the rating is submitted
+ */
+class RatingController {
+	ratingSelected = null;
+	hasSubmitted = false;
+
+	constructor(ratingSelected, hasSubmitted) {
+		this.ratingSelected = ratingSelected;
+		this.hasSubmitted = hasSubmitted;
+	}
+
+	ratingSelectionListener(inputs) {
+		Array.from(inputs).forEach((input) =>
+			input.addEventListener("click", (e) => {
+				console.log("Selected rating " + e.target.value + " out of 5");
+				this.setRating(e.target.value);
+			})
+		);
+	}
+	setRating(value) {
+		this.ratingSelected = value;
+	}
+	getRating() {
+		return this.ratingSelected;
+	}
+	setHasSubmitted(booleanValue) {
+		this.hasSubmitted = booleanValue;
+	}
+
+	/**
+	 * Click handler to display the new template when the rating is submitted
+	 */
+	displayThankYouState(sectionElement, submitElement) {
+		submitElement.addEventListener("click", (e) => {
+			e.preventDefault();
+			// Proceed only if the user has selected a rating
+			if (this.getRating()) {
+				this.setHasSubmitted(true);
+				const ratingSelected = this.getRating();
+
+				// Generate a view
+				const ratingViews = new RatingView();
+				ratingViews.displayThankYouState(sectionElement, ratingSelected);
+			}
+		});
+	}
+}
+
 window.addEventListener("DOMContentLoaded", () => {
 	/**
 	 * The parent element for the component
