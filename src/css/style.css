@@ -79,3 +79,91 @@ p {
 	margin-bottom: 2rem;
 }
 
+label {
+	padding: 0.5rem;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 100%;
+
+	/* changing the position value to center its child elements */
+	position: relative;
+	/* set the default background color */
+	background-color: hsl(213deg 9% 22%);
+}
+label span,
+label input {
+	position: absolute;
+}
+
+label span {
+	color: white;
+	border-radius: 100%;
+	color: var(--light-grey);
+	padding: 1rem 1.2rem;
+
+	/* centering the element in relative to its parent */
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	/* increase the z-index, so that later its background-color
+	 is changed according to the input's state */
+	z-index: 2;
+}
+
+/* RADIO BUTTONS */
+input[type="radio"] {
+	/* with these height and width, the user has a larger area
+	to select a rating */
+	height: 100%;
+	width: 100%;
+
+	/* center the radio element */
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	/* the radio elements' styles can't be styled uniformly
+	accross browsers, but they remain functional even when 
+	transparent */
+	opacity: 0;
+	z-index: -1;
+}
+
+/* 
+To display hover and selected states, change the background color of the adjacent span which have a higher z-index than the radio buttons.
+This solution works across browsers.
+*/
+input[type="radio"]:hover + span {
+	background-color: var(--medium-grey);
+	cursor: pointer;
+	color: white;
+}
+input[type="radio"]:checked + span {
+	background-color: var(--orange);
+	color: white;
+}
+input[type="radio"]:hover {
+	cursor: pointer;
+}
+/* END RADIO BUTTONS */
+
+/* SUBMIT BUTTON */
+input[type="submit"] {
+	background-color: var(--orange);
+	color: white;
+	width: 100%;
+	padding: 1rem;
+	border-radius: 3rem;
+	text-transform: uppercase;
+}
+input[type="submit"]:hover,
+input[type="submit"]:active {
+	background-color: white;
+	color: var(--orange);
+}
+input[type="submit"]:hover {
+	cursor: pointer;
+}
+/* END SUBMIT BUTTON */
+
