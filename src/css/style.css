@@ -1,0 +1,193 @@
+@font-face {
+	font-family: "Overpass";
+	src: url("./../fonts/Overpass-Regular.ttf");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Overpass";
+	src: url("./../fonts/Overpass-Bold.ttf");
+	font-weight: 700;
+}
+
+:root {
+	--orange: hsl(25, 97%, 53%);
+	--white: hsl(0, 0%, 100%);
+	--light-grey: hsl(217, 12%, 63%);
+	--medium-grey: hsl(216, 12%, 54%);
+	--dark-blue: hsl(213, 19%, 18%);
+	--very-dark-blue: hsl(216, 12%, 8%);
+}
+
+/* CUSTOM RESETS */
+input[type="radio"],
+input[type="submit"] {
+	margin: unset;
+	border: unset;
+}
+input[type="submit"] {
+	background: unset;
+}
+/* END CUSTOM RESETS */
+
+body {
+	color: var(--light-grey);
+	background-color: var(--very-dark-blue);
+	font-size: 15px;
+	height: 100vh;
+	font-family: "Overpass";
+
+	display: grid;
+	place-items: center;
+}
+
+/* SECTION ELEMENT, the component's container */
+section {
+	/* set the width on mobile */
+	width: 80%;
+	/* limit the width for desktop */
+	max-width: 22.5rem;
+	background-color: var(--dark-blue);
+	padding: 1rem 1rem 2rem;
+	border-radius: 1rem;
+}
+/* END SECTION ELEMENT */
+
+h1,
+.copy-heading {
+	color: white;
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+p {
+	line-height: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+#star-icon {
+	width: 1rem;
+	background-color: hsl(213deg 9% 22%);
+	padding: 1rem;
+	border-radius: 100%;
+	margin-bottom: 2rem;
+}
+
+.radios-container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+
+label {
+	padding: 0.5rem;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 100%;
+
+	/* changing the position value to center its child elements */
+	position: relative;
+	/* set the default background color */
+	background-color: hsl(213deg 9% 22%);
+}
+label span,
+label input {
+	position: absolute;
+}
+
+label span {
+	color: white;
+	border-radius: 100%;
+	color: var(--light-grey);
+	padding: 1rem 1.2rem;
+
+	/* centering the element in relative to its parent */
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	/* increase the z-index, so that later its background-color
+	 is changed according to the input's state */
+	z-index: 2;
+}
+
+/* RADIO BUTTONS */
+input[type="radio"] {
+	/* with these height and width, the user has a larger area
+	to select a rating */
+	height: 100%;
+	width: 100%;
+
+	/* center the radio element */
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	/* the radio elements' styles can't be styled uniformly
+	accross browsers, but they remain functional even when 
+	transparent */
+	opacity: 0;
+	z-index: -1;
+}
+
+/* 
+To display hover and selected states, change the background color of the adjacent span which have a higher z-index than the radio buttons.
+This solution works across browsers.
+*/
+input[type="radio"]:hover + span {
+	background-color: var(--medium-grey);
+	cursor: pointer;
+	color: white;
+}
+input[type="radio"]:checked + span {
+	background-color: var(--orange);
+	color: white;
+}
+input[type="radio"]:hover {
+	cursor: pointer;
+}
+/* END RADIO BUTTONS */
+
+/* SUBMIT BUTTON */
+input[type="submit"] {
+	background-color: var(--orange);
+	color: white;
+	width: 100%;
+	padding: 1rem;
+	border-radius: 3rem;
+	text-transform: uppercase;
+}
+input[type="submit"]:hover,
+input[type="submit"]:active {
+	background-color: white;
+	color: var(--orange);
+}
+input[type="submit"]:hover {
+	cursor: pointer;
+}
+/* END SUBMIT BUTTON */
+
+/* "THANK YOU" STATE */
+.thank-you-state {
+	text-align: center;
+}
+
+#thank-you-illustration {
+	margin-bottom: 1rem;
+}
+
+.selection-recap {
+	color: var(--orange);
+	background-color: hsl(216deg 12% 25%);
+	border-radius: 1rem;
+	padding: 0 0.5rem;
+	width: fit-content;
+	text-align: center;
+	font-size: 0.8rem;
+	margin: 0 auto 2rem;
+}
+
+.thank-you-state p:last-child {
+	margin-bottom: unset;
+}
+/* END "THANK YOU" STATE */
