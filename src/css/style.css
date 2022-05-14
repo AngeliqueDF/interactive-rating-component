@@ -17,3 +17,15 @@
 	--dark-blue: hsl(213, 19%, 18%);
 	--very-dark-blue: hsl(216, 12%, 8%);
 }
+
+/* CUSTOM RESETS */
+input[type="radio"],
+input[type="submit"] {
+	margin: unset;
+	border: unset;
+}
+input[type="submit"] {
+	background: unset;
+}
+/* END CUSTOM RESETS */
+
