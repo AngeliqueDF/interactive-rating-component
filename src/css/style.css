@@ -176,6 +176,16 @@ input[type="submit"]:hover {
 	margin-bottom: 1rem;
 }
 
+.selection-recap {
+	color: var(--orange);
+	background-color: hsl(216deg 12% 25%);
+	border-radius: 1rem;
+	padding: 0 0.5rem;
+	width: fit-content;
+	text-align: center;
+	font-size: 0.8rem;
+	margin: 0 auto 2rem;
+}
 
 .thank-you-state p:last-child {
 	margin-bottom: unset;
