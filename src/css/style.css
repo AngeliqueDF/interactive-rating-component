@@ -29,3 +29,14 @@ input[type="submit"] {
 }
 /* END CUSTOM RESETS */
 
+body {
+	color: var(--light-grey);
+	background-color: var(--very-dark-blue);
+	font-size: 15px;
+	height: 100vh;
+	font-family: "Overpass";
+
+	display: grid;
+	place-items: center;
+}
+
