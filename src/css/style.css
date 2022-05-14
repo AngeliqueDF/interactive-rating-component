@@ -167,3 +167,17 @@ input[type="submit"]:hover {
 }
 /* END SUBMIT BUTTON */
 
+/* "THANK YOU" STATE */
+.thank-you-state {
+	text-align: center;
+}
+
+#thank-you-illustration {
+	margin-bottom: 1rem;
+}
+
+
+.thank-you-state p:last-child {
+	margin-bottom: unset;
+}
+/* END "THANK YOU" STATE */
