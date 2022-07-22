@@ -1,3 +1,4 @@
+import summaryIllustration from "./../images/illustration-thank-you.svg";
 /**
  * Displays the views
  */
@@ -6,7 +7,7 @@ class RatingView {
 		const thankyouStateTemplate = `
 			<img
 				id="thank-you-illustration"
-				src="src/images/illustration-thank-you.svg"
+				src="${summaryIllustration}"
 				alt=""
 			/>
 			<!-- Add rating here -->
