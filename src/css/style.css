@@ -73,6 +73,7 @@ p {
 
 #star-icon {
 	width: 1rem;
+	height: 1rem;
 	background-color: hsl(213deg 9% 22%);
 	padding: 1rem;
 	border-radius: 100%;
