@@ -113,16 +113,10 @@ input[type="radio"] {
 	height: 100%;
 	width: 100%;
 
-	/* center the radio element */
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-
 	/* the radio elements' styles can't be styled uniformly
 	accross browsers, but they remain functional even when 
 	transparent */
 	opacity: 0;
-	z-index: -1;
 }
 
 /* 
