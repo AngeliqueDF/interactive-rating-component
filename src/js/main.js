@@ -61,8 +61,8 @@ class RatingController {
 	/**
 	 * Click handler to display the new template when the rating is submitted
 	 */
-	displayThankYouState(sectionElement, submitElement) {
-		submitElement.addEventListener("click", (e) => {
+	displayThankYouState(sectionElement, formElement) {
+		formElement.addEventListener("submit", (e) => {
 			e.preventDefault();
 			// Proceed only if the user has selected a rating
 			if (this.getRating()) {
@@ -89,9 +89,9 @@ window.addEventListener("DOMContentLoaded", () => {
 	/**
 	 * The submit input
 	 */
-	const submitElement = document.querySelector('input[type="submit"]');
+	const formElement = document.querySelector("form");
 
 	const ratingController = new RatingController();
 	ratingController.ratingSelectionListener(inputElements);
-	ratingController.displayThankYouState(sectionElement, submitElement);
+	ratingController.displayThankYouState(sectionElement, formElement);
 });
