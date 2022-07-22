@@ -52,6 +52,10 @@ section {
 	padding: 1rem 1rem 2rem;
 	border-radius: 1rem;
 }
+
+.thank-you-state {
+	padding: 2rem 1rem 2rem;
+}
 /* END SECTION ELEMENT */
 
 h1,
