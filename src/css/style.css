@@ -95,19 +95,15 @@ label input {
 }
 
 label span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: white;
 	border-radius: 100%;
 	color: var(--light-grey);
-	padding: 1rem 1.2rem;
 
-	/* centering the element in relative to its parent */
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-
-	/* increase the z-index, so that later its background-color
-	 is changed according to the input's state */
-	z-index: 2;
+	width: 100%;
+	height: 100%;
 }
 
 /* RADIO BUTTONS */
