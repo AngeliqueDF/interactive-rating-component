@@ -2,11 +2,13 @@
 	font-family: "Overpass";
 	src: url("./../fonts/Overpass-Regular.ttf");
 	font-weight: 400;
+	font-display: swap;
 }
 @font-face {
 	font-family: "Overpass";
 	src: url("./../fonts/Overpass-Bold.ttf");
 	font-weight: 700;
+	font-display: swap;
 }
 
 :root {
@@ -34,7 +36,7 @@ body {
 	background-color: var(--very-dark-blue);
 	font-size: 15px;
 	height: 100vh;
-	font-family: "Overpass";
+	font-family: "Overpass", sans-serif;
 
 	display: grid;
 	place-items: center;
