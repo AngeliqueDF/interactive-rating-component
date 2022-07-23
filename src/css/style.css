@@ -95,6 +95,8 @@ label {
 	position: relative;
 	/* set the default background color */
 	background-color: hsl(213deg 9% 22%);
+
+	cursor: pointer;
 }
 label span,
 label input {
