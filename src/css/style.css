@@ -189,3 +189,13 @@ input[type="submit"]:hover {
 	margin-bottom: unset;
 }
 /* END "THANK YOU" STATE */
+
+.attribution {
+	position: fixed;
+	bottom: 1rem;
+	max-width: 90%;
+}
+.attribution,
+.attribution a {
+	color: white;
+}
