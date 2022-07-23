@@ -95,6 +95,8 @@ label {
 	position: relative;
 	/* set the default background color */
 	background-color: hsl(213deg 9% 22%);
+
+	cursor: pointer;
 }
 label span,
 label input {
@@ -187,3 +189,13 @@ input[type="submit"]:hover {
 	margin-bottom: unset;
 }
 /* END "THANK YOU" STATE */
+
+.attribution {
+	position: fixed;
+	bottom: 1rem;
+	max-width: 90%;
+}
+.attribution,
+.attribution a {
+	color: white;
+}

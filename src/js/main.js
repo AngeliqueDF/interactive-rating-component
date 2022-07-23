@@ -10,7 +10,6 @@ class RatingView {
 				src="${summaryIllustration}"
 				alt=""
 			/>
-			<!-- Add rating here -->
 			<p class="selection-recap">
 				You selected <span id="rating-selected">${ratingSelected}</span> out of 5
 			</p>
