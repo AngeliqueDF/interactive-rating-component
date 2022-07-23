@@ -11,7 +11,7 @@
 
 ## Overview
 
-_A component gather quick feedback from your customers!_
+_A component to gather quick feedback from your customers!_
 
 ## Links
 
